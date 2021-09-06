@@ -1,0 +1,34 @@
+String Methods :
+
+    - Access with index.
+        (---[--])
+    - Access with charAt(Value).
+        (---.charAt())
+    - lenght => count string lenght.
+        (---.lenght)
+    - trim() => cut white spice.
+        (---.trim())
+    - toUpperCase() => return string with capital letters.
+        (---.toUpperCase())
+    - toLowerCase() => return string with small letters.
+        (---.toLowerCase())
+    - indexOf(Value: , start from: ) => return number of index for the string u gave it.
+        (---.indexOf())
+    - lastIndexOf(Value: , start from: ) => return number of index for the string u gave it from last of string.
+        (---.lastIndexOf())
+    - slice(start: , end: ) => return slice from string.
+        (---.slice())
+    - repeat(Times) => repeat string.
+        (---.repeat())
+    - split(separator: , Limit: ) => return a array from string.
+        (---.split())
+    - substring() => return a string of indexes u gave  it.
+        (---.substring(--, --))
+    - substr() => return a string of count of letters u gave it.
+        (---.substr(start index (--), count of letters (--)))
+    - includes() => return true if the string has the word u gave it or false if not.
+        (---.includes('--', start index (--)))
+    - startsWith() => return true if string starts with the word u gave it or false if not.
+        (---.startsWith('--', start index (--)))
+    - endsWith() => return true if string ends with the word u gave it or false if not.
+        (---.endsWith('--', length(--)))

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>assignment1</title>
+    <script>
+      // Code One
+        document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      // Code Two
+        window.onload = function () {
+        document.getElementById("el").style.color = "red";
+        };
+    </script>
+</head>
+<body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // Code Three
+        document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+        /*
+            Code one will not work currectly 
+            becouse it's in the head 
+            that's mean it's become before element !
+        */
+        console.error('Code one is incorrect !')
+    </script>
+</body>
+</html>

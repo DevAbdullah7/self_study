@@ -1,0 +1,18 @@
+Number Methodsd:
+    1- toString() : return num to string.
+        syntax: ((--).toString()), (--..toString())
+
+    2- toFixed() : return float num to integer num.
+        syntax: (--.--.toFixed(here write how muny num after .))
+    
+    3- parseInt() : return string and float to int num.
+        syntax: (parseInt('---'))
+    
+    4- parseFloat() : return string to float num.
+        syntax: (parseFloat('---.--'))
+
+    5- isInteger() : return true in integer num only and false in string or float num.
+        syntax: (Number.isInteger(---))
+    
+    6- isNaN() : return true when u calcate a string with num.
+        syntax: (Number.isNaN(---))

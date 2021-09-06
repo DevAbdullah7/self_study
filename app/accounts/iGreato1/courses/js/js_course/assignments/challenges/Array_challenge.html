@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Challenge</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Array Challenge
+        */
+
+        let zero = 0;
+
+        let counter = 3;
+
+        let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+        // Write Code Here
+
+        console.log(my.slice(zero, ++counter).reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"];
+
+        console.log(my.slice(++zero, --counter).reverse()); // ["Elham", "Mazero"]
+
+        let temp = my.slice(zero, --counter).join().substr(counter)
+        let temp2 = my.slice(counter, ++counter).join().substring(--zero, --counter)
+        console.log(temp2 + temp); // "Elzero"
+
+        console.log(temp.substr(counter, ++zero) + temp.substr(++counter).toUpperCase()); // "rO"
+    </script>
+</body>
+
+</html>

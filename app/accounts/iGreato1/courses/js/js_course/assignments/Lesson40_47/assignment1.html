@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment1</title>
+</head>
+
+<body>
+    <script>
+        let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+        let num = 3;
+
+        // Method 1
+        myFriends.pop()
+        console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
+
+        // Method 2
+        let temp = []
+        for (let i = 0; i < myFriends.length; i++) {
+            if (i != num) {
+                temp.push(myFriends[i])
+            } else {
+                continue;
+            }
+        }
+        console.log(temp); // ["Ahmed", "Elham", "Osama"];
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+Comparison Operators: 
+
+    - ( == or != ) Equal or not => compare betwen values only.
+    - ( === or !== ) => compare betwen values and type of data.
+    

@@ -1,0 +1,17 @@
+if conditions :
+
+    if (condition) {
+        code block
+    }
+    else if (condition) {
+        code block
+    }
+    else {
+        code block
+    }
+
+if conditions ternary :
+
+    syn: condition ? if true : if false 
+    ex: age < 20 ? if true: (kid) : if false (man)
+    ex2: age < 20 ? kid : age < 40 ? man : age > 40 ? old man

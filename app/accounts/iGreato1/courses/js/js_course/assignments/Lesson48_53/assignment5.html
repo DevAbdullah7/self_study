@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment5</title>
+</head>
+
+<body>
+    <script>
+        let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+        let letter = "a";
+        let counter = letter.length;
+        for (let i = 0; i < friends.length; i++) {
+            if (friends[i].startsWith(letter.toUpperCase()) == true) {
+                continue;
+            };
+            console.log(`${counter} => ${friends[i]}`)
+            counter += 1
+        }
+    </script>
+</body>
+
+</html>

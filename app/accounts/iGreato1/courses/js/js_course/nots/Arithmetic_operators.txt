@@ -1,0 +1,24 @@
+Arithmetic Operators
+
++ Addition
+- Subtraction
+* Multiplication 
+/ Division 
+** Exponentiation ( ES7 ) ( أس )
+% Modulus ( Division Remainder ) ( باقي القسمة )
+++ Increment [ post / pre ] ( قبل او بعد العنصر ) 
+-- Decrement [ post / pre ] ( قبل او بعد العنصر ) 
+
+------------------------------------------------------------------------------
+incremnt ( ++ ):
+    element value + 1
+Decrement ( -- ):
+    element value - 1
+
+post increment/decrement ( x++ )/( x-- ):
+    it's print num then calculate operation.
+    يطبع الرقم ثم يجري العملية
+
+pre increment/decrement ( ++x )/( --x ):
+    it's calculate operation then print num.
+    يجري العملية ثم يطبع الرقم

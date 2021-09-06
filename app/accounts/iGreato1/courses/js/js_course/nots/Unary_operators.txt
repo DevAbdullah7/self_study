@@ -1,0 +1,17 @@
+Unary operators:
+	- Unary plus ( + )
+		- return number from string
+		- return positive number from
+		  negative number
+		- return 0 from null
+		- return 0 from false
+		- retunr 1 from true
+	- Unary negation ( - )
+		- return negative number from string
+		- return negative number from
+		  positive number
+		- return positive number from
+                                  negative number
+		- return -0 from null
+		- return -0 from false
+		- retunr -1 from true

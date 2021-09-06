@@ -1,0 +1,40 @@
+Array Methods :
+
+    - unshift('', '') => Add elements to the frist.
+        Array.unshift('--')
+    
+    - push('', '') => Add elements to the end.
+        Array.push('--')
+    
+    - shift() => Remove the frist element.
+        Array.shift()
+    
+    - pop() => Remove the last element.
+        Array.pop()
+
+    - sort(Function[opt]) => ترتب المصفوفة بشكل ابجدي
+        Array.sort()
+    
+    - reverse() => تعكس ترتيب المصفوفة
+        Array.reverse()
+    
+    - slice(start[opt], end[opt]) => return new array with indexes u gave it.
+        Array.slice(--, --)
+    
+    - splice(start[Mand], Deletcount[opt], new elements[opt]) => will change the array not return a new array !
+        Array.splice()
+
+Array Searching Methods :
+
+    - indexOf('--', num[opt]) => return index of element.
+        Array.indexOf('--', num[opt])
+        return (-1) if element not found
+
+    - lastIndexOf('--', num[opt]) => return index of element.
+        Array.lastIndexOf('--', num[opt])
+        return (-1) if element not found
+    
+    - includes('--', num[opt]) => return true if element in array.
+        Array.includes('--', num[opt])
+        return (false) if element not found
+    

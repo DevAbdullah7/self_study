@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment6</title>
+</head>
+
+<body>
+    <script>
+        let start = 0;
+        let swappedName = "elZerO";
+
+        let temp = '';
+        for (let i = 0; i < swappedName.length; i++) {
+            if (swappedName[i] === swappedName[i].toLowerCase()) {
+                temp += swappedName[i].toUpperCase()
+            } else {
+                temp += swappedName[i].toLowerCase()
+            }
+        }
+        // Output
+        console.log(temp) // "ELzERo"
+    </script>
+</body>
+
+</html>
