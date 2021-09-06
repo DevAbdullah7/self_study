@@ -12,15 +12,11 @@ def start():
     try:
         if user == 1:
             print('==================================================')
-            username = input('\nUsername: ')
-            try:
-                if os.path.isdir('app\\\\accounts\\\\{}'.format(username)) == True:
-                    print('\n\tWelcome {} ^_^'.format(username))
-                    main()
-                else:
-                    raise Exception('Error: username is incorrect !')
-            except Exception as Error:
-                print(Error)
+            # methods.exist_account()
+            exist_account = methods.exist_account()
+            if exist_account == True:
+                main()
+            else:
                 start()
         elif user == 2:
             print('==================================================')
@@ -41,7 +37,7 @@ def main():
     print('For Requireds: 2')
     print('For Reports: 3')
     print('For Timeline: 4')
-    user = int(input('\n( choice ): \t ( To Exit prees 0 ): '))
+    user = int(input('\n( choice ): \t ( To Exit: 0 OR To Logout: 9 ): '))
     try:
         if user == 1:
             methods.courses()
@@ -55,6 +51,8 @@ def main():
             methods.Timeline()
         elif user == 0:
             pass
+        elif user == 9:
+            start()
         else:
             raise Exception('Error: Your choice is incorrect !')
     except Exception as Error:

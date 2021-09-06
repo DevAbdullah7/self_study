@@ -2,9 +2,11 @@ import os
 import calendar
 import time
 from datetime import datetime
+# from .. .. import main
 calendar.setfirstweekday(calendar.SUNDAY)
 
 # variables
+username = ''
 time_now = datetime.now()
 month_days = calendar.monthrange(time_now.year, time_now.month)[1]
 this_week = 0
@@ -19,12 +21,13 @@ elif 22 <= time_now.day <= 31:
 
 
 def new_account():
-    username = input('Enter username: ')
+    global username
+    username = input('\nEnter Username: ')
     os.mkdir('app\\\\accounts\\\\{}'.format(username))
-    # print('\n\tWelcome {} ^_^'.format(username))
     os.mkdir('app\\\\accounts\\\\{}\\\\courses'.format(username))
     os.mkdir('app\\\\accounts\\\\{}\\\\subjects'.format(username))
     with open('app\\\\accounts\\\\{}\\\\study_plan.txt'.format(username), 'w') as study_plan:
+        study_plan.write('Hello {}.\n\nI\'m glad you are using my script and I hope that it be useful for you .\n\nAfter register and create an account I created all files you may need, now you have to :\n- write the specialization.\n- write all subjects and all courses you want to study it.\n- get course resources to courses folder.\n- get subjects resources to subjects folder.\n\nto see your path ( app/acounts/{} ) ^_^'.format(username, username))
         pass
     os.mkdir('app\\\\accounts\\\\{}\\\\timeline'.format(username))
     os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}'.format(
@@ -46,6 +49,9 @@ def new_account():
                 pass
             with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\{}\\\\Report.txt'.format(
                     username, time_now.year, i, x), 'w') as Report:
+                pass
+            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\{}\\\\schedule.txt'.format(
+                    username, time_now.year, i, x), 'w') as schedule:
                 pass
         for z in range(1, calendar.monthrange(time_now.year, i)[1]+1):
             if z <= 7:
@@ -84,13 +90,29 @@ def new_account():
                 with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\4\\\\{}\\\\Report.txt'.format(
                         username, time_now.year, i, z), 'w') as Report:
                     pass
+    os.system('app\\\\accounts\\\\{}\\\\study_plan.txt'.format(username))
+    print('\nRegister successful ^_^')
+
+
+def exist_account():
+    global username
+    username = input('username: ')
+    try:
+        if os.path.isdir('app\\\\accounts\\\\{}'.format(username)) == True:
+            print('\n\tWelcome {} ^_^'.format(username))
+            return True
+        else:
+            raise Exception('Error: username is incorrect !')
+    except Exception as Error:
+        print(Error)
 
 
 def courses():
     print('==================================================')
 
     def cs50():
-        os.system('app\\\\accounts\\\\{}\\\\courses\\\\cs50\\\\main.bat')
+        os.system(
+            'app\\\\accounts\\\\{}\\\\courses\\\\cs50\\\\main.bat'.format(username))
 
     def python():
         pass
@@ -107,17 +129,19 @@ def courses():
         print('ReactJs course: 3')
         user = int(input('\nchoice : \tTo Exit prees: ( 0 ): '))
         if user == 1:
-            os.system('courses\\\\js\\\\\js_course\\\\main.bat')
+            os.system(
+                'app\\\\accounts\\\\{}\\\\courses\\\\js\\\\\js_course\\\\main.bat'.format(username))
 
     def ux():
         print('Google Course: 1')
         print('Satr Course: 2')
         user = int(input('\nchoice : \tTo Exit prees: ( 0 ): '))
         if user == 1:
-            os.system('courses\\\\ux_design\\\\main.bat')
+            os.system(
+                'app\\\\accounts\\\\{}\\\\courses\\\\ux_design\\\\main.bat'.format(username))
         elif user == 2:
             os.system(
-                'courses\\\\ux_design\\\\Satr_UIUX_Course\\\\main.bat')
+                'app\\\\accounts\\\\{}\\\\courses\\\\ux_design\\\\Satr_UIUX_Course\\\\main.bat'.format(username))
         elif user == 0:
             pass
         else:

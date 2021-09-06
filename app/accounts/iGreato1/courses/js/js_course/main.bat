@@ -1,4 +1,4 @@
-cd courses\js\js_course
+cd app\accounts\iGreato1\courses\js\js_course
 @echo off
 start index.html
 start https://youtube.com/playlist?list=PLDoPjvoNmBAx3kiplQR_oeDqLDBUDYwVv
