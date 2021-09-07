@@ -1,4 +1,0 @@
-weekly requirement:
-
-- 8 hours js course ( elzero )
-- 8 hours ux designer ( google )

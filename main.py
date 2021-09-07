@@ -34,7 +34,7 @@ def start():
 def main():
     print('==================================================')
     print('\nFor Courses: 1')
-    print('For Requireds: 2')
+    print('For Requirements: 2')
     print('For Reports: 3')
     print('For Timeline: 4')
     user = int(input('\n( choice ): \t ( To Exit: 0 OR To Logout: 9 ): '))
@@ -43,7 +43,7 @@ def main():
             methods.courses()
             main()
         elif user == 2:
-            methods.Requireds()
+            methods.Requirements()
             main()
         elif user == 3:
             methods.Reports()

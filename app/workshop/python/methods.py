@@ -32,66 +32,79 @@ def new_account():
     os.mkdir('app\\\\accounts\\\\{}\\\\timeline'.format(username))
     os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}'.format(
         username, time_now.year))
-    with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\Requireds.txt'.format(
-            username, time_now.year), 'w') as Requireds:
+    with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\Requirements.txt'.format(
+            username, time_now.year), 'w') as Requirements:
         pass
     with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\Report.txt'.format(
             username, time_now.year), 'w') as Report:
         pass
-    for i in range(1, 12+1):
+    for month in range(1, 12+1):
         os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}'.format(
-            username, time_now.year, i))
-        for x in range(1, 4+1):
-            os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\{}'.format(
-                username, time_now.year, i, x))
-            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\{}\\\\Requireds.txt'.format(
-                    username, time_now.year, i, x), 'w') as Requireds:
+            username, time_now.year, month))
+        with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\Requirements.txt'.format(
+                username, time_now.year, month), 'w') as Requirements:
+            pass
+        with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\Report.txt'.format(
+                username, time_now.year, month), 'w') as Report:
+            pass
+        for week in range(1, 4+1):
+            os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week{}'.format(
+                username, time_now.year, month, week))
+            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week{}\\\\Requirements.txt'.format(
+                    username, time_now.year, month, week), 'w') as Requirements:
                 pass
-            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\{}\\\\Report.txt'.format(
-                    username, time_now.year, i, x), 'w') as Report:
+            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week{}\\\\Report.txt'.format(
+                    username, time_now.year, month, week), 'w') as Report:
                 pass
-            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\{}\\\\schedule.txt'.format(
-                    username, time_now.year, i, x), 'w') as schedule:
+            with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week{}\\\\schedule.txt'.format(
+                    username, time_now.year, month, week), 'w') as schedule:
                 pass
-        for z in range(1, calendar.monthrange(time_now.year, i)[1]+1):
+        for z in range(1, calendar.monthrange(time_now.year, month)[1]+1):
             if z <= 7:
-                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\1\\\\{}'.format(
-                    username, time_now.year, i, z))
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\1\\\\{}\\\\Requireds.txt'.format(
-                        username, time_now.year, i, z), 'w') as Requireds:
+                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week1\\\\{}'.format(
+                    username, time_now.year, month, z))
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week1\\\\{}\\\\Requirements.txt'.format(
+                        username, time_now.year, month, z), 'w') as Requirements:
                     pass
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\1\\\\{}\\\\Report.txt'.format(
-                        username, time_now.year, i, z), 'w') as Report:
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week1\\\\{}\\\\Report.txt'.format(
+                        username, time_now.year, month, z), 'w') as Report:
                     pass
             elif 8 <= z <= 14:
-                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\2\\\\{}'.format(
-                    username, time_now.year, i, z))
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\2\\\\{}\\\\Requireds.txt'.format(
-                        username, time_now.year, i, z), 'w') as Requireds:
+                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week2\\\\{}'.format(
+                    username, time_now.year, month, z))
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week2\\\\{}\\\\Requirements.txt'.format(
+                        username, time_now.year, month, z), 'w') as Requirements:
                     pass
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\2\\\\{}\\\\Report.txt'.format(
-                        username, time_now.year, i, z), 'w') as Report:
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week2\\\\{}\\\\Report.txt'.format(
+                        username, time_now.year, month, z), 'w') as Report:
                     pass
             elif 15 <= z <= 21:
-                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\3\\\\{}'.format(
-                    username, time_now.year, i, z))
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\3\\\\{}\\\\Requireds.txt'.format(
-                        username, time_now.year, i, z), 'w') as Requireds:
+                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week3\\\\{}'.format(
+                    username, time_now.year, month, z))
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week3\\\\{}\\\\Requirements.txt'.format(
+                        username, time_now.year, month, z), 'w') as Requirements:
                     pass
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\3\\\\{}\\\\Report.txt'.format(
-                        username, time_now.year, i, z), 'w') as Report:
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week3\\\\{}\\\\Report.txt'.format(
+                        username, time_now.year, month, z), 'w') as Report:
                     pass
             elif 22 <= z <= 31:
-                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\4\\\\{}'.format(
-                    username, time_now.year, i, z))
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\4\\\\{}\\\\Requireds.txt'.format(
-                        username, time_now.year, i, z), 'w') as Requireds:
+                os.mkdir('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week4\\\\{}'.format(
+                    username, time_now.year, month, z))
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week4\\\\{}\\\\Requirements.txt'.format(
+                        username, time_now.year, month, z), 'w') as Requirements:
                     pass
-                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\4\\\\{}\\\\Report.txt'.format(
-                        username, time_now.year, i, z), 'w') as Report:
+                with open('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week4\\\\{}\\\\Report.txt'.format(
+                        username, time_now.year, month, z), 'w') as Report:
                     pass
-    os.system('app\\\\accounts\\\\{}\\\\study_plan.txt'.format(username))
     print('\nRegister successful ^_^')
+    time.sleep(1)
+    print('\nHello {}'.format(username))
+    time.sleep(2)
+    print('I\'m glad you are using my script')
+    time.sleep(3)
+    print('and I hope that it be useful for you.')
+    time.sleep(3)
+    os.system('app\\\\accounts\\\\{}\\\\study_plan.txt'.format(username))
 
 
 def exist_account():
@@ -130,7 +143,7 @@ def courses():
         user = int(input('\nchoice : \tTo Exit prees: ( 0 ): '))
         if user == 1:
             os.system(
-                'app\\\\accounts\\\\{}\\\\courses\\\\js\\\\\js_course\\\\main.bat'.format(username))
+                'app\\\\accounts\\\\{}\\\\courses\\\\js\\\\js_course\\\\main.bat'.format(username))
 
     def ux():
         print('Google Course: 1')
@@ -138,7 +151,7 @@ def courses():
         user = int(input('\nchoice : \tTo Exit prees: ( 0 ): '))
         if user == 1:
             os.system(
-                'app\\\\accounts\\\\{}\\\\courses\\\\ux_design\\\\main.bat'.format(username))
+                'app\\\\accounts\\\\{}\\\\courses\\\\ux_design\\\\Google_UX_Course\\\\main.bat'.format(username))
         elif user == 2:
             os.system(
                 'app\\\\accounts\\\\{}\\\\courses\\\\ux_design\\\\Satr_UIUX_Course\\\\main.bat'.format(username))
@@ -174,7 +187,7 @@ def courses():
         ux()
 
 
-def Requireds():
+def Requirements():
     print('==================================================')
     print('\nYearly Requirements: 1')
     print('Monthly Requirements: 2')
@@ -184,16 +197,16 @@ def Requireds():
     try:
         if klint == 1:
             os.system(
-                'timeline\\\\{}\\\\Requirements.txt'.format(time_now.year))
+                'app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\Requirements.txt'.format(username, time_now.year))
         elif klint == 2:
-            os.system('timeline\\\\{}\\\\{}\\\\Requirements.txt'.format(
-                time_now.year, time_now.month))
+            os.system('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\Requirements.txt'.format(
+                username, time_now.year, time_now.month))
         elif klint == 3:
-            os.system('timeline\\\\{}\\\\{}\\\\{}\\\\Requirements.txt'.format(
-                time_now.year, time_now.month, this_week))
+            os.system('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week{}\\\\Requirements.txt'.format(
+                username, time_now.year, time_now.month, this_week))
         elif klint == 4:
-            os.system('timeline\\\\{}\\\\{}\\\\{}\\\\{}\\\\Requirements.txt'.format(
-                time_now.year, time_now.month, this_week, time_now.day))
+            os.system('app\\\\accounts\\\\{}\\\\timeline\\\\{}\\\\{}\\\\week{}\\\\{}\\\\Requirements.txt'.format(
+                username, time_now.year, time_now.month, this_week, time_now.day))
         elif klint == 0:
             pass
         else:
@@ -201,7 +214,7 @@ def Requireds():
     except Exception as Error:
         print(Error)
         time.sleep(2)
-        Requireds()
+        Requirements()
 
 
 def Attendees():

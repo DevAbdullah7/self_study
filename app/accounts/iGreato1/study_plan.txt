@@ -1,0 +1,11 @@
+Hello iGreato1.
+
+I'm glad you are using my script and I hope that it be useful for you .
+
+After register and create an account I created all files you may need, now you have to :
+- write the specialization.
+- write all subjects and all courses you want to study it.
+- get course resources to courses folder.
+- get subjects resources to subjects folder.
+
+to see your path ( app/acounts/iGreato1 ) ^_^
